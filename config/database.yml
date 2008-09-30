@@ -9,12 +9,12 @@ test:
   adapter: mysql
   database: scawy_production
   username: scawy
-  password: barrywhite
+  password: XXX
   host: dataload.scawymonstur.com
 
 production:
   adapter: mysql
   database: scawy_production
   username: scawy
-  password: barrywhite
+  password: XXX
   host: dataload.scawymonstur.com
