@@ -13,7 +13,7 @@ class WordsController < ApplicationController
   # GET /words/1.xml
   def show
     @word = Word.find(params[:id])
-    @words = Word.find_all_by_kind_id(@word.kind.id)
+    @words = Word.find_all_by_kind_id(@word.kind.id, :order => "created_at DESC")
 
     respond_to do |format|
       format.html # show.html.erb
