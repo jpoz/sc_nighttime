@@ -1,0 +1,19 @@
+<table border="0" id="word_list">
+	<tr>
+<% count = 0 %>
+<% @words.keys.each do |k| %>
+		<% count += 1 %>
+		<% if count >= 4 %>
+			<% count = 0 %>
+			</tr><tr>
+		<% end %>
+	<td>
+
+		<h4><%= k %>:</h4>
+		<% @words[k].each do |w| %>
+			<%= link_to w.title, word_path(w) %><span class="byline"><%= w.author.short_name %></span><br/>
+		<% end %>
+	</td>
+<% end %>		
+	</tr>
+		</table>

@@ -1,0 +1,26 @@
+
+<% show = params[:show] ? params[:show].to_i : 0 %>
+<table border="0", id="images">
+	<tr>
+		<td id="mini_menu">
+			<h4>Images:</h4>
+			<% @image_sets.each do |i| %>
+					<%= link_to	i.name, image_path(i.perm) %>
+					<br />
+			<% end %>
+			<%= image_tag "/images/small.jpg", :class => "hump_sucks" %>
+		</td>
+		<td>
+			<% @images.each do |i| %>
+				<% if i["num"] == show %>
+					<%= image_tag(i["url-big"]) if i["num"] == show %><br />
+					<%= i['caption'] %><br />
+				<% else %>
+					<%= link_to image_tag(i["url-small"]), "/images/#{params[:id]}?show=#{i["num"]}" %>
+				<% end %>
+			<% end %>
+		</td>
+	</tr>
+</table>
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Scawy Monstur</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="James Pozdena">
+	<%= stylesheet_link_tag "scawy" %>
+
+</head>
+<body>
+	<div id="main_title">
+  	<a href="/">Scawy Monstur</a>
+  </div>
+  <div id="header">
+
+      <table id="menu" border="0">
+        <tr>
+          <td><%= link_to 'Words', words_path %></td>
+          <td>:</td>
+          <td><%= link_to 'Images', images_path %></td>
+          <td>:</td>
+          <td><%= link_to 'About us', '/about/us' %></td>
+          <td>:</td>
+          <td><%= link_to 'Blog', kind_path('blog') %></td>
+        </tr>
+      </table>
+      <div id="line">
+         <br />
+      </div>
+		<% if session[:user] %>
+			You are currently logged in as: <%= session[:user] %> | <%= link_to 'Admin home', '/admin' %> | <%= link_to 'Logout', '/admin/logout' %>
+		<% end %>
+  </div>
+  <div id="content">
+	<%= yield %>
+		<div id="line">
+        <br />
+     </div>
+		<div id="footer">
+		 <%= image_tag "/images/small.jpg", :class => "hump_sucks" %>
+	  </div>
+  </div>
+
+
+</body>
+</html>

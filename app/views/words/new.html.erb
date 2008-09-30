@@ -1,0 +1,27 @@
+<h1>New words</h1>
+
+<% form_for(@words) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :type_id %><br />
+    <%= f.collection_select( :kind_id, Kind.find(:all), :id, :name, {:prompt => false}) %>
+  </p>
+  <p>
+    <%= f.label :author_id %><br />
+    <%= f.collection_select( :author_id, Author.find(:all), :id, :full_name, {:prompt => false}) %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', '/admin' %>

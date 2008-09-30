@@ -1,0 +1,31 @@
+<table border="0">
+	<tr>
+		<td id="mini_menu">
+			<h4><%= @word.kind.name %></h4>
+			<% @words.each do |w| %>
+				<%= link_to w.title, word_path(w.id) %><br/>
+			<% end %>
+		</td>
+		<td id="text">
+			<h1>
+			  <%=h @word.title %>
+			</h1>
+			
+			<span class="byline">
+			  by: <%=h @word.author.full_name %>
+			</span>
+			
+			<div class="words">
+			 <%= @word.body %>	
+			</div>
+
+			<% if current_user? %>
+				<%= link_to 'Edit', edit_word_path(@word) %> |
+				<%= link_to 'Back', words_path %> |
+				<%= link_to 'Destroy', @word, :confirm => 'Are you sure?', :method => :delete %>
+			<% end %>
+		</td>
+	</tr>
+</table>
+
+

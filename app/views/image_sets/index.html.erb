@@ -1,0 +1,22 @@
+<h1>Listing image_sets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Perm</th>
+  </tr>
+
+<% for image_set in @image_sets %>
+  <tr>
+    <td><%=h image_set.name %></td>
+    <td><%=h image_set.perm %></td>
+    <td><%= link_to 'Show', image_path(image_set.perm) %></td>
+    <td><%= link_to 'Edit', edit_image_set_path(image_set) %></td>
+    <td><%= link_to 'Destroy', image_set, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New image_set', new_image_set_path %>

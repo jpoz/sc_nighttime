@@ -1,0 +1,21 @@
+<h1>New image_set</h1>
+
+<% form_for(@image_set) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+		This is the name of what will show to the user... so something like I'm POZ yo or Tim is a sexy MOFO<br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :perm %><br />
+		This is what the link will be to tumblr so what ever http://<b>(THIS)</b>.tumblr.com/ is
+    <%= f.text_field :perm %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', image_sets_path %>

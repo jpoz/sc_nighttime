@@ -1,0 +1,22 @@
+<h1>New kind</h1>
+
+<% form_for(@kind) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <h3>Display name </h3>  (this is the name that users will see)<br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <h3>Link </h3> 
+		this is the text that will be in the url <br />
+		(don't put anything stupid in here like : ' " ( & #) OR @. Nothing that shouldn't be in a URL<br />
+		Oh and *NO* upper case... this should be something like => gina_s_blog <br />
+    <%= f.text_field :perm %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', kinds_path %>

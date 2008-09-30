@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+/*	background: url('/images/back.jpg') repeat-x;*/
+ /* font-family: Georgia, Georgia, serif*/
+	font-family: 'Comic Sans MS', cursive;
+}
+#main_title {
+	font-family: Courier, monospace;
+	background-color: #B2B2B2;
+	text-align: center;
+	font-size: 200%;
+/*	font-weight: bold;*/
+	padding-bottom: 5px;
+	margin-bottom: 30px;
+	color: #333;
+} #main_title a {
+	text-decoration: none;
+} #main_title a:hover {
+	background: none;
+	text-decoration: none;
+}
+#header, #content, #menu {
+  margin: 0px auto;
+  width: 900px;
+}
+#header, #menu {
+  text-align: center;
+	font-size: 110%;
+}
+#menu td {
+  height: 50px;
+}
+#menu a {
+	color: #000;
+}
+#menu a:hover {
+	color: white;
+}
+h1,h2,h3,h4 {
+	color: #727272;
+}
+h4 {
+	font-size: 110%;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+a {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 3px;
+	margin-bottom: 6px;
+}
+img {
+	border: 0px;
+}
+a:hover {
+	color: white;
+	background-color: #D6D6D6;
+/*	text-decoration: underline;*/
+}
+#line {
+  background: url('/images/line.png') repeat-x;;
+	clear: both;
+}
+/*h1, h2, h3 {
+  font-family: 'Arial Black', Gadget, sans-serif;
+}*/
+h1 {
+  margin-bottom: 25px;
+}
+.byline {
+	font-style: italic;
+  display: block;
+  color: #808080;
+}
+p {
+	font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.words {
+	text-align: justify;
+	margin-bottom: 20px;
+}
+#mini_menu {
+	vertical-align: top;
+  color: #6D6D6D;
+  width: 280px;
+  text-align: left;
+}
+#title {
+  color: black;
+
+  text-align: center;
+}
+#images {
+	padding-top: 30px;
+}
+.image_set {
+	margin: 0px 20px 0px 20px;
+	display: inline;
+}
+#login_box {
+	text-align: center;
+	background-color: #AD41D7;
+	border: solid 2px #439316;
+	margin: 0px auto;
+	width: 300px;
+	padding: 100px;
+}
+#footer {
+	font-size: 10px;
+	text-align: center;
+	color: #E7E7E7;
+}
+.hump_sucks {
+	margin-top: 75px;
+}
+#word_list {
+	width: 100%;
+}
+#word_list td{
+	width: 300px;
+	padding: 30px;
+	vertical-align: top;
+}
+td {
+	vertical-align: top;
+}

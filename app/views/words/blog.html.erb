@@ -1,0 +1,13 @@
+<% @words.each do |word| %>
+  <h2><%= word.title %></h2>
+  <div class="words">
+  	<%= word.body %>
+  </div>
+	<% if current_user? %>
+		<%= link_to 'Edit', edit_word_path(word) %> |
+		<%= link_to 'Back', words_path %>
+	<% end %>
+  <div id="line">
+     <br />
+  </div>
+<% end %>

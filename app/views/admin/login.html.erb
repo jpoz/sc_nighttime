@@ -1,0 +1,7 @@
+<div id="login_box">
+	<% form_tag('/admin/login', :method => :post) do %>
+		<%= password_field_tag 'password' %><br />
+		<br />
+		<%= submit_tag "Login" %>
+	<% end %>
+</div>

@@ -1,0 +1,18 @@
+<p>
+  <b>First:</b>
+  <%=h @author.first %>
+</p>
+
+<p>
+  <b>Middle:</b>
+  <%=h @author.middle %>
+</p>
+
+<p>
+  <b>Last:</b>
+  <%=h @author.last %>
+</p>
+
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
